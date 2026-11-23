@@ -134,8 +134,8 @@
     "axis": "rig-a/jaw_right",
     "next_seq": 43,
     "state": [
-      0.6,
-      1.05
+      0.86,
+      0.75
     ],
     "training_link": null
   },
