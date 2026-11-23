@@ -1,62 +1,46 @@
 {
-  "axes": [
-    "jaw_left",
-    "jaw_right"
-  ],
-  "blocks": [
-    {
-      "block": "rec-07",
-      "axis_map": [
-        "jaw_left",
-        "jaw_right"
-      ],
-      "sequence": 40,
-      "continuation": [
+  "capture": "capture-1-b",
+  "arrival": {
+    "id": "rec-08",
+    "seq": 42,
+    "axis_map": [
+      "rig-a/jaw_left",
+      "rig-a/jaw_right"
+    ],
+    "mode": [
+      [
         "continue",
-        "restart"
-      ],
-      "status": [
-        "present",
-        "present"
-      ],
-      "coefficients": [
+        "continue"
+      ]
+    ],
+    "a": [
+      [
         [
-          1.0,
+          1,
+          1
+        ],
+        [
+          1,
           0.5
-        ],
-        [
-          0.2,
-          0.8
         ]
       ]
-    },
-    {
-      "block": "rec-08",
-      "axis_map": [
-        "jaw_right",
-        "jaw_left"
-      ],
-      "sequence": 42,
-      "continuation": [
-        "continue",
-        "gap"
-      ],
-      "status": [
-        "present",
-        "missing"
-      ],
-      "coefficients": [
+    ],
+    "b": [
+      [
         [
-          0.9,
+          0.1,
+          0
+        ],
+        [
+          0,
           0.3
-        ],
-        [
-          0.4,
-          0.6
         ]
       ]
-    }
+    ]
+  },
+  "redelivery": [
+    "rec-07",
+    "rec-08"
   ],
-  "revision": "synthetic-revision-2",
-  "note": "用于说明资料发生修订，不包含预设的业务计算结论。"
+  "replaces": "capture-1-a"
 }

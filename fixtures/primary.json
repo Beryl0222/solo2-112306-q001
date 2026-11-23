@@ -5,56 +5,150 @@
   ],
   "blocks": [
     {
-      "block": "rec-07",
+      "id": "rec-07",
+      "seq": 40,
       "axis_map": [
-        "jaw_left",
-        "jaw_right"
+        "rig-a/jaw_left",
+        "rig-a/jaw_right"
       ],
-      "sequence": 40,
-      "continuation": [
-        "continue",
-        "restart"
-      ],
-      "status": [
-        "present",
-        "present"
-      ],
-      "coefficients": [
+      "mode": [
         [
-          1.0,
-          0.5
+          "continue",
+          "restart"
         ],
         [
-          0.2,
-          0.8
+          "pause",
+          "continue"
+        ]
+      ],
+      "a": [
+        [
+          [
+            0.8,
+            0.9
+          ],
+          [
+            0.5,
+            0.6
+          ]
+        ],
+        [
+          [
+            1,
+            1
+          ],
+          [
+            0.4,
+            0.5
+          ]
+        ]
+      ],
+      "b": [
+        [
+          [
+            0.1,
+            0.2
+          ],
+          [
+            0.9,
+            1.0
+          ]
+        ],
+        [
+          [
+            0,
+            0
+          ],
+          [
+            0.5,
+            -0.2
+          ]
         ]
       ]
     },
     {
-      "block": "rec-08",
+      "id": "rec-09",
+      "seq": 43,
       "axis_map": [
-        "jaw_right",
-        "jaw_left"
+        "rig-a/jaw_right",
+        "rig-a/jaw_left",
+        "rig-b/jaw_left"
       ],
-      "sequence": 42,
-      "continuation": [
-        "continue",
-        "gap"
-      ],
-      "status": [
-        "present",
-        "missing"
-      ],
-      "coefficients": [
+      "mode": [
         [
-          0.9,
-          0.3
-        ],
+          "continue",
+          "continue",
+          "restart"
+        ]
+      ],
+      "a": [
         [
-          0.4,
-          0.6
+          [
+            1,
+            1
+          ],
+          [
+            0.9,
+            0.8
+          ],
+          [
+            0.2,
+            0.9
+          ]
+        ]
+      ],
+      "b": [
+        [
+          [
+            0.2,
+            0.2
+          ],
+          [
+            0.4,
+            0.4
+          ],
+          [
+            0.3,
+            0.1
+          ]
         ]
       ]
+    }
+  ],
+  "capture": "capture-1-a",
+  "initial_state": {
+    "rig-a/jaw_left": [
+      1,
+      -0.5
+    ],
+    "rig-a/jaw_right": [
+      0,
+      2
+    ],
+    "rig-b/jaw_left": [
+      0,
+      0
+    ]
+  },
+  "handoff": {
+    "axis": "rig-a/jaw_right",
+    "next_seq": 43,
+    "state": [
+      0.6,
+      1.05
+    ],
+    "training_link": null
+  },
+  "training_requests": [
+    {
+      "block": "rec-09",
+      "axis": "rig-a/jaw_left",
+      "seq": 43,
+      "upstream": [
+        1.0,
+        0.5
+      ],
+      "truncate_before": 42
     }
   ]
 }
